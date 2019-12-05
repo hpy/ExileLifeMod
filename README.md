@@ -18,7 +18,7 @@ Welcome to ExileLife
 ___
 
 This Mod is 90% completed, however I no longer have the time to finish the remaining core features. 
-Note that it is provded AS IS, and will require extensive Arma 3 and Exile Knowledge to run a Server.
+Note that it is provided AS IS, and will require extensive Arma 3 and Exile Knowledge to run a Server.
 
 To see a complete list of features and WIP see the Trello Board: https://trello.com/b/O5wm8Vbp/exile-life-development
 
@@ -38,6 +38,8 @@ ___
 
 - ExileMod v1.0.4a
 - TaskForceRadio & TeamSpeak Plugin (custom version modified for ExileLife and licenced seperately as per APL-SA)
+- ExileLifeMod - Download Signed Asset, Weapon and Vehicle Files From: https://www.dropbox.com/s/cnk9wxhjou042xt/%40ExileLife.zip?dl=0
+
 
 #### Setup/Install
 
