@@ -1,0 +1,170 @@
+/*%FSM<COMPILE "D:\Steam\steamapps\common\Arma 3 Tools\FSMEditor\scriptedFSM.cfg, main.fsm">*/
+/*%FSM<HEAD>*/
+/*
+item0[] = {"Start",0,250,775.000000,-50.000000,875.000000,0.000000,0.000000,"Start"};
+item1[] = {"Continue",8,218,775.000000,25.000000,875.000000,75.000000,0.000000,"Continue"};
+item2[] = {"Wait",2,250,775.000000,100.000000,875.000000,150.000000,0.000000,"Wait"};
+item3[] = {"Ground_Weapon_Ho",4,218,650.000000,61.552673,750.000000,111.552673,0.000000,"Ground" \n "Weapon" \n "Holder"};
+item4[] = {"Weapon_Holder_Si",4,218,649.389648,120.685516,749.389648,170.685516,0.000000,"Weapon" \n "Holder" \n "Simulated"};
+item5[] = {"Loot",4,218,725.567688,175.610291,825.567688,225.610291,0.000000,"Loot"};
+item6[] = {"Groups",4,218,901.220520,123.126648,1001.220520,173.126648,0.000000,"Groups"};
+item7[] = {"All_Dead",4,218,899.389771,57.891022,999.389771,107.891022,0.000000,"All" \n "Dead"};
+item8[] = {"Ground_Vehicle_H",4,4314,828.200256,175.063843,928.200256,225.063843,0.000000,"Ground" \n "Vehicle" \n "Holder"};
+link0[] = {0,1};
+link1[] = {1,2};
+link2[] = {2,3};
+link3[] = {2,4};
+link4[] = {2,5};
+link5[] = {2,6};
+link6[] = {2,7};
+link7[] = {2,8};
+link8[] = {3,2};
+link9[] = {4,2};
+link10[] = {5,2};
+link11[] = {6,2};
+link12[] = {7,2};
+link13[] = {8,2};
+globals[] = {0.000000,0,0,0,0,640,480,1,456,6316128,1,507.138519,1104.597778,441.719635,-113.631027,641,868,1};
+window[] = {2,-1,-1,-1,-1,1124,2076,3370,390,3,659};
+*//*%FSM</HEAD>*/
+class FSM
+{
+        fsmName = "main.fsm";
+        class States
+        {
+                /*%FSM<STATE "Start">*/
+                class Start
+                {
+                        name = "Start";
+                        itemno = 0;
+                        init = /*%FSM<STATEINIT""">*/"_groundWeaponHolderInterval = 60 * getNumber (configFile >> ""CfgSettings"" >> ""GarbageCollector"" >> ""Ingame"" >> ""GroundWeaponHolder"" >> ""interval"");" \n
+                         "_groundWeaponHolderLastTick = diag_tickTime;" \n
+                         "" \n
+                         "_groundVehicleHolderInterval = 60 * getNumber (configFile >> ""CfgSettings"" >> ""GarbageCollector"" >> ""Ingame"" >> ""GroundVehicleHolder"" >> ""interval"");" \n
+                         "_groundVehicleHolderLastTick = diag_tickTime;" \n
+                         "" \n
+                         "_weaponHolderSimulatedInterval = 60 * getNumber (configFile >> ""CfgSettings"" >> ""GarbageCollector"" >> ""Ingame"" >> ""WeaponHolderSimulated"" >> ""interval"");" \n
+                         "_weaponHolderSimulatedLastTick = diag_tickTime;" \n
+                         "" \n
+                         "_allDeadInterval = 60 * getNumber (configFile >> ""CfgSettings"" >> ""GarbageCollector"" >> ""Ingame"" >> ""AllDead"" >> ""interval"");" \n
+                         "_allDeadLastTick = diag_tickTime;" \n
+                         "" \n
+                         "_lootInterval = 60 * getNumber (configFile >> ""CfgSettings"" >> ""GarbageCollector"" >> ""Ingame"" >> ""Loot"" >> ""interval"");" \n
+                         "_lootLastTick = diag_tickTime;" \n
+                         "" \n
+                         "_groupsInterval = 60 * getNumber (configFile >> ""CfgSettings"" >> ""GarbageCollector"" >> ""Ingame"" >> ""Groups"" >> ""interval"");" \n
+                         "_groupsLastTick = diag_tickTime;"/*%FSM</STATEINIT""">*/;
+                        precondition = /*%FSM<STATEPRECONDITION""">*/""/*%FSM</STATEPRECONDITION""">*/;
+                        class Links
+                        {
+                                /*%FSM<LINK "Continue">*/
+                                class Continue
+                                {
+                                        itemno = 1;
+                                        priority = 0.000000;
+                                        to="Wait";
+                                        precondition = /*%FSM<CONDPRECONDITION""">*/""/*%FSM</CONDPRECONDITION""">*/;
+                                        condition=/*%FSM<CONDITION""">*/"true"/*%FSM</CONDITION""">*/;
+                                        action=/*%FSM<ACTION""">*/""/*%FSM</ACTION""">*/;
+                                };
+                                /*%FSM</LINK>*/
+                        };
+                };
+                /*%FSM</STATE>*/
+                /*%FSM<STATE "Wait">*/
+                class Wait
+                {
+                        name = "Wait";
+                        itemno = 2;
+                        init = /*%FSM<STATEINIT""">*/""/*%FSM</STATEINIT""">*/;
+                        precondition = /*%FSM<STATEPRECONDITION""">*/""/*%FSM</STATEPRECONDITION""">*/;
+                        class Links
+                        {
+                                /*%FSM<LINK "Weapon_Holder_Si">*/
+                                class Weapon_Holder_Si
+                                {
+                                        itemno = 4;
+                                        priority = 0.000000;
+                                        to="Wait";
+                                        precondition = /*%FSM<CONDPRECONDITION""">*/""/*%FSM</CONDPRECONDITION""">*/;
+                                        condition=/*%FSM<CONDITION""">*/"(diag_ticktime - _weaponHolderSimulatedLastTick) >=_weaponHolderSimulatedInterval"/*%FSM</CONDITION""">*/;
+                                        action=/*%FSM<ACTION""">*/"_weaponHolderSimulatedLastTick = diag_tickTime;" \n
+                                         "" \n
+                                         "call ExileServer_system_garbageCollector_unscheduled_deleteWeaponHolderSimulated;"/*%FSM</ACTION""">*/;
+                                };
+                                /*%FSM</LINK>*/
+                                /*%FSM<LINK "Loot">*/
+                                class Loot
+                                {
+                                        itemno = 5;
+                                        priority = 0.000000;
+                                        to="Wait";
+                                        precondition = /*%FSM<CONDPRECONDITION""">*/""/*%FSM</CONDPRECONDITION""">*/;
+                                        condition=/*%FSM<CONDITION""">*/"(diag_ticktime - _lootLastTick) >=_lootInterval"/*%FSM</CONDITION""">*/;
+                                        action=/*%FSM<ACTION""">*/"_lootLastTick = diag_tickTime;" \n
+                                         "" \n
+                                         "call ExileServer_system_garbageCollector_unscheduled_deleteLoot;"/*%FSM</ACTION""">*/;
+                                };
+                                /*%FSM</LINK>*/
+                                /*%FSM<LINK "Groups">*/
+                                class Groups
+                                {
+                                        itemno = 6;
+                                        priority = 0.000000;
+                                        to="Wait";
+                                        precondition = /*%FSM<CONDPRECONDITION""">*/""/*%FSM</CONDPRECONDITION""">*/;
+                                        condition=/*%FSM<CONDITION""">*/"(diag_ticktime - _groupsLastTick) >=_groupsInterval"/*%FSM</CONDITION""">*/;
+                                        action=/*%FSM<ACTION""">*/"_groupsLastTick = diag_tickTime;" \n
+                                         "" \n
+                                         "call ExileServer_system_garbageCollector_unscheduled_deleteGroups;"/*%FSM</ACTION""">*/;
+                                };
+                                /*%FSM</LINK>*/
+                                /*%FSM<LINK "All_Dead">*/
+                                class All_Dead
+                                {
+                                        itemno = 7;
+                                        priority = 0.000000;
+                                        to="Wait";
+                                        precondition = /*%FSM<CONDPRECONDITION""">*/""/*%FSM</CONDPRECONDITION""">*/;
+                                        condition=/*%FSM<CONDITION""">*/"(diag_ticktime - _allDeadLastTick) >=_allDeadInterval"/*%FSM</CONDITION""">*/;
+                                        action=/*%FSM<ACTION""">*/"_allDeadLastTick = diag_tickTime;" \n
+                                         "" \n
+                                         "call ExileServer_system_garbageCollector_unscheduled_deleteAllDead;"/*%FSM</ACTION""">*/;
+                                };
+                                /*%FSM</LINK>*/
+                                /*%FSM<LINK "Ground_Vehicle_H">*/
+                                class Ground_Vehicle_H
+                                {
+                                        itemno = 8;
+                                        priority = 0.000000;
+                                        to="Wait";
+                                        precondition = /*%FSM<CONDPRECONDITION""">*/""/*%FSM</CONDPRECONDITION""">*/;
+                                        condition=/*%FSM<CONDITION""">*/"(diag_ticktime - _groundVehicleHolderLastTick) >=_groundVehicleHolderInterval"/*%FSM</CONDITION""">*/;
+                                        action=/*%FSM<ACTION""">*/"_groundVehicleHolderLastTick = diag_tickTime;" \n
+                                         "" \n
+                                         "call ExilelifeServer_system_garbageCollector_unscheduled_deleteGroundVehicleHolders;"/*%FSM</ACTION""">*/;
+                                };
+                                /*%FSM</LINK>*/
+                                /*%FSM<LINK "Ground_Weapon_Ho">*/
+                                class Ground_Weapon_Ho
+                                {
+                                        itemno = 3;
+                                        priority = 0.000000;
+                                        to="Wait";
+                                        precondition = /*%FSM<CONDPRECONDITION""">*/""/*%FSM</CONDPRECONDITION""">*/;
+                                        condition=/*%FSM<CONDITION""">*/"(diag_ticktime - _groundWeaponHolderLastTick) >=_groundWeaponHolderInterval"/*%FSM</CONDITION""">*/;
+                                        action=/*%FSM<ACTION""">*/"_groundWeaponHolderLastTick = diag_tickTime;" \n
+                                         "" \n
+                                         "call ExileServer_system_garbageCollector_unscheduled_deleteGroundWeaponHolders;"/*%FSM</ACTION""">*/;
+                                };
+                                /*%FSM</LINK>*/
+                        };
+                };
+                /*%FSM</STATE>*/
+        };
+        initState="Start";
+        finalStates[] =
+        {
+        };
+};
+/*%FSM</COMPILE>*/

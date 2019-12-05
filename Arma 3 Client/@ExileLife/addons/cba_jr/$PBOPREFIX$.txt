@@ -1,0 +1,6 @@
+///'cba_jr.pbo' from Mikero's dos tools, dll version 5.99///
+prefix=cba_jr
+Mikero=DePbo.dll.5.99
+Pbo Type is: Arma Addon
+Sha: '75AF43769FBA9BD13B34022973992376DC00527E'
+//////</HEADER>//////

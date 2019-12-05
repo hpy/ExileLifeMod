@@ -22,6 +22,8 @@ Note that it is provded AS IS, and will require extensive Arma 3 and Exile Knowl
 
 To see a complete list of features and WIP see the Trello Board: https://trello.com/b/O5wm8Vbp/exile-life-development
 
+If anyone finishes these features, please issue a pull request as it would be great to have the mod completed for all to enjoy!
+
 ___
 
 #### Key Features Still To Implement:
@@ -48,31 +50,35 @@ ___
 
 #### A few things to Note:
 
-- Voice is routed through TaskForceRadio, and so talking ingame will not go through arma! This can be configured from internal exilemod keybindings
+- Voice is routed through TaskForceRadio, and so talking ingame will not go through arma! This can be configured in exilelife menu custom configs.
 
 - Multiple Characters can be enabled in database for users. You can have two regular characters, or 1 regular and 1 guard character. See DB -> player_perks -> hasTwoClasses / hasGuardAccess. These characters are unique and share nothing in common.
 
-- Items such as fishing rods, shovels, pickaxes etc can have multiple uses. To access secondary action, hold special action key (shift - configurable in exilelife game custom configs)
+- Items such as fishing rods, shovels, pickaxes etc can have multiple uses. To access secondary action, hold Secondary Action Key SHIFT when clicking to use item.
 
-- Vehicles have a dynamic menu attached to them. To use, hold down special action key when looking at vehicle. If you have a hostage that you are forcing to walk with you, then you can force them into vehicle using this system.
+- Vehicles have a dynamic menu attached to them. To use, hold down special action key (Left Windows Key - configurable in exilelife menu custom configs) when looking at vehicle. If you have a hostage that you are forcing to walk with you, then you can force them into vehicle using this system. 
 
-- Melee System uses special action key
+- Pick Fruit -> uses special action key or scroll menu
+
+- Melee System -> hit players with melee weapons (shovels hoes etc)
 
 - Weapons can be damaged, and will jam.
 
 - Players can message each other using XM8 Messaging App. Currently you can message any player, however it is intended that this system will be changed to use a friend system. The friend system would work such that upon meeting another player, you can give them your PrisonerID Number and they can enter it to save you as a contact.
 
-- Hostage System uses zipties, but allows you to move prisoner around
+- Hostage System uses zipties, but allows you to move prisoner around. Note that global variables can lag, and you may need to look at something else and look back at the player for it to update variables to get scroll menu options on your hostage.
 
 - Skills can be improved by performing actions such as lockpicking etc. Improving your skill rank, will allow you to perform the action faster, and will also allow you to do group jobs that require specific skills etc.
 
-- Farming takes time, plants need to be watered and fertilised and they will slowly begin to grow.
+- Farming takes time, plants need to be watered and fertilised and they will slowly begin to grow. You can plant seeds from inventory by looking at farming plot. Farming plot is made by using the hoe and secondary action.
+
+- Digging with shovel uses secondary action key.
 
 - Items can be emptied, in some cases, this will execute a secondary action (ie emptying dog food while in water will attract fish for fishing)
 
-- Prisoners can be sent to jail by guards only (see kavala docks office building for jail cell)
+- Prisoners can be sent to jail by guards only (see kavala docks office building for jail cell to force hostages into (you can lock them inside))
 
-- Housing can only be claimed using a sleeping bag in a protection zone of a gang you are a member or, or inside Athira under guard protection. This is similar to Exiles territory system, except you can only place items INSIDE the house you have claimed.
+- Housing can only be claimed using a sleeping bag in a protection zone of a gang you are a member of, or inside Athira under guard protection. This is similar to Exiles territory system, except you can only place items INSIDE the house you have claimed.
 
 - Members of gangs receive a paycheck from the gang vault. Since the gang boss system is not implemented this will run empty and paychecks will stop.
 
@@ -85,6 +91,10 @@ ___
 - Guards earn money through bribery, and jobs. If enough guards online, they can sign up to job board at gang base and do an ore run from mine to kavala docks. Gangs will be informed of this happening (higher ranks hear first), and they can and are encouraged to attack this convoy. The ore can be stolen from the vehicles using Exile Action System by both guards and prisoners.
 
 - There are lots of jobs for prisoners to choose from. These can be accessed via the job board. New jobs can be added via configs and custom files.
+
+- Gangs can be joined from inside Athira by visiting gang house
+
+- Virtual Garage in Athira
 
 Lots more features implemented (too many to list here). 
 See Trello board for what is implemented, and look at the code to see how they work.

@@ -1,0 +1,2 @@
+"extDB3 Addon" is distributed under GPLv3 or later
+http://www.gnu.org/licenses/

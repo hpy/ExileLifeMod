@@ -1,0 +1,6 @@
+///'exile_client_overwrites.pbo' from Mikero's dos tools, dll version 5.99///
+prefix=exile_client_overwrites
+Mikero=DePbo.dll.5.99
+Pbo Type is: Arma Addon
+Sha: 'A39015D087A1F980303849484D38F2AE4B6C58F1'
+//////</HEADER>//////

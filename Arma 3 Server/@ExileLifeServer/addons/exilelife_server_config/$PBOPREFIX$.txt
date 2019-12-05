@@ -1,0 +1,6 @@
+///'exilelife_server_config.pbo' from Mikero's dos tools, dll version 5.99///
+prefix=exilelife_server_config
+Mikero=DePbo.dll.5.99
+Pbo Type is: Arma Addon
+Sha: 'A5C7C0EB03CAA224E7DE08D7A92E275DD3882760'
+//////</HEADER>//////

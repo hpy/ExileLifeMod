@@ -1,0 +1,53 @@
+////////////////////////////////////////////////////////////////////
+//DeRap: Produced from mikero's Dos Tools Dll version 5.99
+//'now' is Thu Dec 05 18:57:39 2019 : 'file' last modified on Thu Dec 05 06:11:55 2019
+//http://dev-heaven.net/projects/list_files/mikero-pbodll
+////////////////////////////////////////////////////////////////////
+
+#define _ARMA_
+
+//Class exilelife_assets : models\Items\Construction\Images\ExileLife_Construction_Board.rvmat{
+ambient[] = {0.6,0.6,0.6,1};
+diffuse[] = {0.6,0.6,0.6,1};
+forcedDiffuse[] = {0,0,0,0};
+emmisive[] = {0,0,0,0};
+specular[] = {0.01,0.01,0.01,1};
+specularPower = 100;
+PixelShaderID = "Super";
+VertexShaderID = "Super";
+class Stage1
+{
+	texture = "exilelife_assets\models\Items\Construction\Images\ExileLife_Construction_Board_nohq.paa";
+	uvSource = "tex";
+};
+class Stage2
+{
+	texture = "#(argb,8,8,3)color(0.5,0.5,0.5,0,DT)";
+	uvSource = "tex";
+};
+class Stage3
+{
+	texture = "#(argb,8,8,3)color(0,0,0,0,MC)";
+	uvSource = "tex";
+};
+class Stage4
+{
+	texture = "#(argb,8,8,3)color(1,1,1,0,AS)";
+	uvSource = "tex";
+};
+class Stage5
+{
+	texture = "exile_assets\model\Exile_WoodPlank_smdi.paa";
+	uvSource = "tex";
+};
+class Stage6
+{
+	texture = "#(ai,32,128,1)fresnel(0.45,0.35)";
+	uvSource = "tex";
+};
+class Stage7
+{
+	texture = "exile_assets\model\env_land_co.paa";
+	uvSource = "tex";
+};
+//};

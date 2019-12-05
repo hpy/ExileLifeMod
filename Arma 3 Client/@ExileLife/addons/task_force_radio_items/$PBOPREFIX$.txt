@@ -1,0 +1,6 @@
+///'task_force_radio_items.pbo' from Mikero's dos tools, dll version 5.99///
+prefix=task_force_radio_items
+Mikero=DePbo.dll.5.99
+Pbo Type is: Arma Addon
+Sha: '6BF3D05B127EA0E16EE8DA1EE2DED2659D3AB9EB'
+//////</HEADER>//////

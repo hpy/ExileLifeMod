@@ -1,0 +1,20 @@
+////////////////////////////////////////////////////////////////////
+//DeRap: Produced from mikero's Dos Tools Dll version 5.99
+//'now' is Thu Dec 05 18:57:45 2019 : 'file' last modified on Thu Dec 05 06:25:27 2019
+//http://dev-heaven.net/projects/list_files/mikero-pbodll
+////////////////////////////////////////////////////////////////////
+
+#define _ARMA_
+
+//Class exilelife_vehicles : hatchback\data\rubber.bisurf{
+Density = 300;
+rough = 0.1;
+dust = 0;
+bulletPenetrability = 300;
+soundEnviron = "Empty";
+isWater = 0;
+friction = 0.9;
+restitution = 0.5;
+impact = "Hit_Rubber";
+soundHit = "rubber";
+//};

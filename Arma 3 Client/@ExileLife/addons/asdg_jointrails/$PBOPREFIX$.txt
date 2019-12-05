@@ -1,0 +1,6 @@
+///'asdg_jointrails.pbo' from Mikero's dos tools, dll version 5.99///
+prefix=asdg_jointrails
+Mikero=DePbo.dll.5.99
+Pbo Type is: Arma Addon
+Sha: '4DE4A5A32B59A7091C8FFE87459F4017FA4396CA'
+//////</HEADER>//////

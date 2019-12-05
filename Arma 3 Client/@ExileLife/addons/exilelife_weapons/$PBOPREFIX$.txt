@@ -1,0 +1,6 @@
+///'exilelife_weapons.pbo' from Mikero's dos tools, dll version 5.99///
+prefix=exilelife_weapons
+Mikero=DePbo.dll.5.99
+Pbo Type is: Arma Addon
+Sha: '42A4F699B065C186DC0F00A3FFC461FD6685FC82'
+//////</HEADER>//////

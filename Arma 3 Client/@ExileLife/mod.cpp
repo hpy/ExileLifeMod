@@ -1,0 +1,10 @@
+name = "ExileLife";
+author = "ExileLife Mod Team";
+action = "http://www.exilelifemod.com";
+dir = "@ExileLife";
+logo = "mod.paa";
+logoOver = "mod.paa";
+picture = "exilelife_assets\texture\mod\logo.paa";
+hidePicture = 0;
+hideName = 0;
+overview = "";
