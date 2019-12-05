@@ -34,5 +34,5 @@ Key Features Still To Implement:
 
 Required Mods:
 
-ExileMod v1.0.4a - 
-TaskForceRadio & TeamSpeak Plugin (custom version modified for ExileLife and licenced seperately as per APL-SA)
+- ExileMod v1.0.4a
+- TaskForceRadio & TeamSpeak Plugin (custom version modified for ExileLife and licenced seperately as per APL-SA)
