@@ -13,7 +13,7 @@ You are a fresh inmate, processed by the courts and shipped straight to EXILE. Y
 
 The life of a gang member, on the other hand, requires strength, perseverance, and loyalty. Your gang is your family, shelter, job, and above all else, your protection. Prove your worth to your gang and you will find your place in its hierarchy. However, even in families, power comes at a cost and you may find that the only way to raise yourself above the rest is to remove them by force. Just remember that loyalty is rewarded, but a poorly-planned betrayal will lead to a punishment worse than death.
 
-Welcome to Exile Life
+Welcome to ExileLife
 
 ___
 
@@ -24,7 +24,7 @@ To see a complete list of features and WIP see the Trello Board: https://trello.
 
 ___
 
-Key Features Still To Implement:
+#### Key Features Still To Implement:
 
 1. Gang Boss Management - https://trello.com/c/v7G3q136
 2. Gang Vault - https://trello.com/c/3ir6se4n
@@ -32,7 +32,26 @@ Key Features Still To Implement:
 4. Small additions to a variety of features...
 
 
-Required Mods:
+#### Required Mods:
 
 - ExileMod v1.0.4a
 - TaskForceRadio & TeamSpeak Plugin (custom version modified for ExileLife and licenced seperately as per APL-SA)
+
+#### Setup/Install
+
+1. The Easiest way to install, is to first install and configure a working vanilla ExileMod Server
+2. Modify/replace Server Config Files as Provided with ExileLife
+3. Update Database to ExileLife Version using provided SQL file
+4. Replace Exile Default Mission File with ExileLife Mission File
+5. Explore
+
+
+#### A few things to Note:
+
+Voice is routed through TaskForceRadio, and so talking ingame will not go through arma! This can be configured from internal exilemod keybindings
+
+Multiple Characters can be enabled in database for users. You can have two regular characters, or 1 regular and 1 guard character.
+
+Prisoners can be sent to jail by guards only (see kavala docks office building for jail cell)
+
+lots and lots of features implemented (too many to list here). See Trello board for what is implemented, and look at the code to see how they work.
