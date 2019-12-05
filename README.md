@@ -24,7 +24,7 @@ To see a complete list of features and WIP see the Trello Board: https://trello.
 
 ___
 
-Key Features To Implement:
+Key Features Still To Implement:
 
 1. Gang Boss Management - https://trello.com/c/v7G3q136
 2. Gang Vault - https://trello.com/c/3ir6se4n
