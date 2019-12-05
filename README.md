@@ -48,10 +48,43 @@ ___
 
 #### A few things to Note:
 
-Voice is routed through TaskForceRadio, and so talking ingame will not go through arma! This can be configured from internal exilemod keybindings
+- Voice is routed through TaskForceRadio, and so talking ingame will not go through arma! This can be configured from internal exilemod keybindings
 
-Multiple Characters can be enabled in database for users. You can have two regular characters, or 1 regular and 1 guard character.
+- Multiple Characters can be enabled in database for users. You can have two regular characters, or 1 regular and 1 guard character. See DB -> player_perks -> hasTwoClasses / hasGuardAccess. These characters are unique and share nothing in common.
 
-Prisoners can be sent to jail by guards only (see kavala docks office building for jail cell)
+- Items such as fishing rods, shovels, pickaxes etc can have multiple uses. To access secondary action, hold special action key (shift - configurable in exilelife game custom configs)
 
-lots and lots of features implemented (too many to list here). See Trello board for what is implemented, and look at the code to see how they work.
+- Vehicles have a dynamic menu attached to them. To use, hold down special action key when looking at vehicle. If you have a hostage that you are forcing to walk with you, then you can force them into vehicle using this system.
+
+- Melee System uses special action key
+
+- Weapons can be damaged, and will jam.
+
+- Players can message each other using XM8 Messaging App. Currently you can message any player, however it is intended that this system will be changed to use a friend system. The friend system would work such that upon meeting another player, you can give them your PrisonerID Number and they can enter it to save you as a contact.
+
+- Hostage System uses zipties, but allows you to move prisoner around
+
+- Skills can be improved by performing actions such as lockpicking etc. Improving your skill rank, will allow you to perform the action faster, and will also allow you to do group jobs that require specific skills etc.
+
+- Farming takes time, plants need to be watered and fertilised and they will slowly begin to grow.
+
+- Items can be emptied, in some cases, this will execute a secondary action (ie emptying dog food while in water will attract fish for fishing)
+
+- Prisoners can be sent to jail by guards only (see kavala docks office building for jail cell)
+
+- Housing can only be claimed using a sleeping bag in a protection zone of a gang you are a member or, or inside Athira under guard protection. This is similar to Exiles territory system, except you can only place items INSIDE the house you have claimed.
+
+- Members of gangs receive a paycheck from the gang vault. Since the gang boss system is not implemented this will run empty and paychecks will stop.
+
+- Murderers can become paramedics by signing up to medic inside gang house in Athira. When a player dies, they can call a guard medic, or a gang medic - each has a pro/con, in that a guard medic costs poptabs, and a gang medic costs respect. This system acts like a gig economy system, in that the first medic to accept a job will be given the job. If a player chooses to commit suicide before medic arrives, they will start a new life, and lose a percentage of skills they have acquired. The attending medic will also still be paid from the users poptabs. If medic does not arrive in time, the user gets respawned at Athira for free.
+
+- Jail is hard labour. Prisoner can either mine the required ore, or wait for the time to expire.
+
+- Guards can view prisoner information and offences via xm8 app.
+
+- Guards earn money through bribery, and jobs. If enough guards online, they can sign up to job board at gang base and do an ore run from mine to kavala docks. Gangs will be informed of this happening (higher ranks hear first), and they can and are encouraged to attack this convoy. The ore can be stolen from the vehicles using Exile Action System by both guards and prisoners.
+
+- There are lots of jobs for prisoners to choose from. These can be accessed via the job board. New jobs can be added via configs and custom files.
+
+Lots more features implemented (too many to list here). 
+See Trello board for what is implemented, and look at the code to see how they work.
